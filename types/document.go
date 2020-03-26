@@ -8,9 +8,11 @@ const (
 )
 
 func (i DocType) String() string {
-	if i == -1 {
+	enums := [...]string{"Iin", "Bin"}
+
+	if -1 >= i || int(i) >= len(enums) {
 		return "Unk"
 	}
 
-	return [...]string{"Iin", "Bin"}[i]
+	return enums[i]
 }

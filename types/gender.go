@@ -8,9 +8,11 @@ const (
 )
 
 func (i GenderType) String() string {
-	if i == -1 {
+	enums := [...]string{"Male", "Female"}
+
+	if -1 >= i || int(i) >= len(enums) {
 		return "Unk"
 	}
 
-	return [...]string{"Male", "Female"}[i]
+	return enums[i]
 }

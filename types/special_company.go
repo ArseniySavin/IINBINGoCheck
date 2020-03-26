@@ -11,8 +11,11 @@ const (
 )
 
 func (i SpecialCompanyType) String() string {
-	if i == -1 {
+	enums := [...]string{"HeadOffice", "DepartOffice", "Agency", "Other", "Farm"}
+
+	if -1 >= i || int(i) >= len(enums) {
 		return "Unk"
 	}
-	return [...]string{"HeadOffice", "DepartOffice", "Agency", "Other", "Farm"}[i]
+
+	return enums[i]
 }
