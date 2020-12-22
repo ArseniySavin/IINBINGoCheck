@@ -1,12 +1,13 @@
 package test
 
 import (
-	"github.com/ArseniySavin/IINBINGoCheck/types"
 	"testing"
+
+	"github.com/ArseniySavin/IINBINGoCheck/iinbindata"
 )
 
 func TestSpecialCompanyType_Len_Array(t *testing.T) {
-	a := types.SpecialCompanyType(5)
+	a := iinbindata.SpecialCompanyType(5)
 	res := a.String()
 
 	if res != "Unk" {
@@ -15,7 +16,7 @@ func TestSpecialCompanyType_Len_Array(t *testing.T) {
 }
 
 func TestSpecialCompanyType_ValueType_Less_Unk(t *testing.T) {
-	a := types.SpecialCompanyType(-2)
+	a := iinbindata.SpecialCompanyType(-2)
 
 	res := a.String()
 
@@ -25,7 +26,7 @@ func TestSpecialCompanyType_ValueType_Less_Unk(t *testing.T) {
 }
 
 func TestSpecialCompanyType_Equal_Unk(t *testing.T) {
-	a := types.SpecialCompanyType(types.Unk)
+	a := iinbindata.SpecialCompanyType(iinbindata.Unk)
 	res := a.String()
 
 	if res != "Unk" {
@@ -40,7 +41,7 @@ func TestSpecialCompanyType_Equal_Unk(t *testing.T) {
 }
 
 func TestSpecialCompanyType_HeadOffice(t *testing.T) {
-	a := types.SpecialCompanyType(types.HeadOffice)
+	a := iinbindata.SpecialCompanyType(iinbindata.HeadOffice)
 
 	res := a.String()
 
@@ -50,7 +51,7 @@ func TestSpecialCompanyType_HeadOffice(t *testing.T) {
 }
 
 func TestSpecialCompanyType_DepartOffice(t *testing.T) {
-	a := types.SpecialCompanyType(types.DepartOffice)
+	a := iinbindata.SpecialCompanyType(iinbindata.DepartOffice)
 
 	res := a.String()
 
@@ -60,7 +61,7 @@ func TestSpecialCompanyType_DepartOffice(t *testing.T) {
 }
 
 func TestSpecialCompanyType_Agency(t *testing.T) {
-	a := types.SpecialCompanyType(types.Agency)
+	a := iinbindata.SpecialCompanyType(iinbindata.Agency)
 
 	res := a.String()
 
@@ -70,7 +71,7 @@ func TestSpecialCompanyType_Agency(t *testing.T) {
 }
 
 func TestSpecialCompanyType_Other(t *testing.T) {
-	a := types.SpecialCompanyType(types.Other)
+	a := iinbindata.SpecialCompanyType(iinbindata.Other)
 
 	res := a.String()
 
@@ -80,7 +81,7 @@ func TestSpecialCompanyType_Other(t *testing.T) {
 }
 
 func TestSpecialCompanyType_Farm(t *testing.T) {
-	a := types.SpecialCompanyType(types.Farm)
+	a := iinbindata.SpecialCompanyType(iinbindata.Farm)
 
 	res := a.String()
 

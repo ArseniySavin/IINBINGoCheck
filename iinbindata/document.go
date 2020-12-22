@@ -1,10 +1,10 @@
-package types
+package iinbindata
 
 type DocType int
 
 const (
-	Iin DocType = 0
-	Bin DocType = 1
+	IIN DocType = 0
+	BIN DocType = 1
 )
 
 func (i DocType) String() string {

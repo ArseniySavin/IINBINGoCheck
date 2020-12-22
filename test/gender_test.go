@@ -1,12 +1,13 @@
 package test
 
 import (
-	"github.com/ArseniySavin/IINBINGoCheck/types"
 	"testing"
+
+	"github.com/ArseniySavin/IINBINGoCheck/iinbindata"
 )
 
 func TestGenderType_Len_Array(t *testing.T) {
-	a := types.GenderType(5)
+	a := iinbindata.GenderType(5)
 	res := a.String()
 
 	if res != "Unk" {
@@ -15,7 +16,7 @@ func TestGenderType_Len_Array(t *testing.T) {
 }
 
 func TestGenderType_ValueType_Less_Unk(t *testing.T) {
-	a := types.GenderType(-2)
+	a := iinbindata.GenderType(-2)
 
 	res := a.String()
 
@@ -25,7 +26,7 @@ func TestGenderType_ValueType_Less_Unk(t *testing.T) {
 }
 
 func TestGenderType_Equal_Unk(t *testing.T) {
-	a := types.GenderType(types.Unk)
+	a := iinbindata.GenderType(iinbindata.Unk)
 	res := a.String()
 
 	if res != "Unk" {
@@ -40,7 +41,7 @@ func TestGenderType_Equal_Unk(t *testing.T) {
 }
 
 func TestGenderType_Female(t *testing.T) {
-	a := types.GenderType(types.Female)
+	a := iinbindata.GenderType(iinbindata.Female)
 
 	res := a.String()
 
@@ -50,7 +51,7 @@ func TestGenderType_Female(t *testing.T) {
 }
 
 func TestGenderType_Male(t *testing.T) {
-	a := types.GenderType(types.Male)
+	a := iinbindata.GenderType(iinbindata.Male)
 
 	res := a.String()
 

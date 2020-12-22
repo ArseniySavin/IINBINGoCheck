@@ -1,12 +1,13 @@
 package test
 
 import (
-	"github.com/ArseniySavin/IINBINGoCheck/types"
 	"testing"
+
+	"github.com/ArseniySavin/IINBINGoCheck/iinbindata"
 )
 
 func TestCompanyType_ValueType_Less_Unk(t *testing.T) {
-	a := types.CompanyType(-2)
+	a := iinbindata.CompanyType(-2)
 
 	res := a.String()
 
@@ -16,7 +17,7 @@ func TestCompanyType_ValueType_Less_Unk(t *testing.T) {
 }
 
 func TestCompanyType_Equal_Unk(t *testing.T) {
-	a := types.CompanyType(types.Unk)
+	a := iinbindata.CompanyType(iinbindata.Unk)
 	res := a.String()
 
 	if res != "Unk" {
@@ -31,7 +32,7 @@ func TestCompanyType_Equal_Unk(t *testing.T) {
 }
 
 func TestCompanyType_LegalResident(t *testing.T) {
-	a := types.CompanyType(types.LegalResident)
+	a := iinbindata.CompanyType(iinbindata.LegalResident)
 
 	res := a.String()
 
@@ -41,7 +42,7 @@ func TestCompanyType_LegalResident(t *testing.T) {
 }
 
 func TestCompanyType_LegalNoResident(t *testing.T) {
-	a := types.CompanyType(types.LegalNoResident)
+	a := iinbindata.CompanyType(iinbindata.LegalNoResident)
 
 	res := a.String()
 
@@ -51,7 +52,7 @@ func TestCompanyType_LegalNoResident(t *testing.T) {
 }
 
 func TestCompanyType_Individual(t *testing.T) {
-	a := types.CompanyType(types.Individual)
+	a := iinbindata.CompanyType(iinbindata.Individual)
 
 	res := a.String()
 

@@ -1,12 +1,13 @@
 package test
 
 import (
-	"github.com/ArseniySavin/IINBINGoCheck/types"
 	"testing"
+
+	"github.com/ArseniySavin/IINBINGoCheck/iinbindata"
 )
 
 func TestDocType_Len_Array(t *testing.T) {
-	a := types.DocType(3)
+	a := iinbindata.DocType(3)
 	res := a.String()
 
 	if res != "Unk" {
@@ -15,7 +16,7 @@ func TestDocType_Len_Array(t *testing.T) {
 }
 
 func TestDocType_ValueType_Less_Unk(t *testing.T) {
-	a := types.DocType(-2)
+	a := iinbindata.DocType(-2)
 
 	res := a.String()
 
@@ -25,7 +26,7 @@ func TestDocType_ValueType_Less_Unk(t *testing.T) {
 }
 
 func TestDocType_Equal_Unk(t *testing.T) {
-	a := types.DocType(types.Unk)
+	a := iinbindata.DocType(iinbindata.Unk)
 	res := a.String()
 
 	if res != "Unk" {
@@ -40,7 +41,7 @@ func TestDocType_Equal_Unk(t *testing.T) {
 }
 
 func TestDocType_Bin(t *testing.T) {
-	a := types.DocType(types.Bin)
+	a := iinbindata.DocType(1)
 
 	res := a.String()
 
@@ -50,7 +51,7 @@ func TestDocType_Bin(t *testing.T) {
 }
 
 func TestDocType_Iin(t *testing.T) {
-	a := types.DocType(types.Iin)
+	a := iinbindata.DocType(0)
 
 	res := a.String()
 
