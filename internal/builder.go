@@ -18,7 +18,7 @@ func SetBirthDateUsingCentury(c, y1, y2, m1, m2, d1, d2 int) time.Time {
 		century = 20
 	}
 
-	birthDate, _ := time.Parse("2006-02-01",
+	birthDate, _ := time.Parse("2006-01-02",
 		fmt.Sprintf("%d%d%d-%d%d-%d%d",
 			century, y1, y2, m1, m2, d1, d2))
 
